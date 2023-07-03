@@ -11,6 +11,9 @@ public class UserDTO {
     private String name;
     private String userName;
     private String password;
-    private Set<RoleDTO>roleDTOS;
+    private String phoneNumber;
+    private String address;
+    private Set<RoleDTO>role;
     private boolean enabled;
+
 }

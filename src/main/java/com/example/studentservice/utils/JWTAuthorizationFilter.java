@@ -27,18 +27,18 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
 @Override
 
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        if (request.getServletPath().matches("/pjese(.*)")
-//                || request.getServletPath().matches("/employee(.*)")
+protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+
+               if (request.getServletPath().matches("/ticket(.*)")
+//
                 || request.getServletPath().matches("/user(.*)")
 
-                || request.getServletPath().matches("/admin(.*)")
 
-                || request.getServletPath().matches("/task(.*)")
+                || request.getServletPath().matches("/pjese(.*)")
 
-                || request.getServletPath().matches("/cleaner(.*)")
+                || request.getServletPath().matches("/login(.*)")
 
-                || request.getServletPath().matches("/(property.*)")
+
         ) {
             filterChain.doFilter(request, response);
         } else {

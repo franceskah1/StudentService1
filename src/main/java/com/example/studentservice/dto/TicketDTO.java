@@ -10,5 +10,7 @@ public class TicketDTO {
 
     private String description;
 
+    private String ticketStatus;
+
     PjeseDTO pjeseDTO;
 }

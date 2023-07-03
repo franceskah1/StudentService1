@@ -1,5 +1,4 @@
 package com.example.studentservice.Converter;
-
 import com.example.studentservice.dto.TicketDTO;
 import com.example.studentservice.model.Ticket;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +16,7 @@ public class TicketToTicketDTO implements Converter<Ticket, TicketDTO> {
         ticketDTO.setDescription(source.getDescription());
         ticketDTO.setLaptopId(source.getLaptopId());
         ticketDTO.setPjeseDTO(toPjeseeDTO.convert(source.getPjese()));
+        ticketDTO.setTicketStatus(source.getTicketStatus().name());
         return ticketDTO;
     }
         return null;

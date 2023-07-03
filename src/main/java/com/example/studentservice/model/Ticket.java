@@ -19,10 +19,14 @@ public class Ticket extends BaseEntity {
     private String description;
 
     @Enumerated(EnumType.STRING)
-    private TicketStatus status;
+    private TicketStatus ticketStatus;
 
     @ManyToOne
     @JoinColumn(name = "pjese_id", referencedColumnName = "id")
     private Pjese pjese;
 
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

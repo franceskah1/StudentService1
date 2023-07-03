@@ -1,5 +1,4 @@
 package com.example.studentservice.model;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,8 +20,13 @@ public class User extends BaseEntity implements UserDetails {
     private String name;
     private String username;
 
+    private String phoneNumber;
+
+    private String address;
+
     private String email;
     private String password;
+
     private boolean isAccountNonExpired = true;
     private boolean isAccountNonLocked = true;
     private boolean isCredentialsNonExpired = true;

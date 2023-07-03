@@ -15,7 +15,7 @@ public class PjeseDTOtoPjes implements Converter<PjeseDTO, Pjese> {
          pjese.setId(source.getId());
          pjese.setName(source.getName());
          pjese.setStock(source.getStock());
-         pjese.setStock(source.getStock());
+         pjese.setPrice(source.getPrice());
          return pjese;
      }
         return null;
